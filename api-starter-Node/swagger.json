@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Documentation",
+    "version": "1.0.0",
+    "description":"API Information for MySoundsGlobal backend"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Dummy": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "description": "Unique identifier for the dummy"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the dummy"
+          },
+          "markedAsRead": {
+            "type": "boolean",
+            "description": "Indicates if the dummy is marked as read"
+          },
+          "markedAsView": {
+            "type": "boolean",
+            "description": "Indicates if the dummy is marked as viewed"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the dummy"
+          },
+          "redirectLink": {
+            "type": "string",
+            "description": "Link to redirect"
+          }
+        }
+      }
+    }
+  }
+}
