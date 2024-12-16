@@ -14,6 +14,10 @@ const userSchema = new Schema({
   ...defaultSchemaOptions
 })
 
+userSchema.methods.generateAuthToken = function() {
+  return jwt.sign({ _id: this._id }, constants.security.TOKEN_SECRET, { expiresIn: '7d' })
+}
+
 const UserStore = mongoose.model('user', userSchema, 'users')
 
 module.exports = UserStore
