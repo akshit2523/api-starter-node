@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const { v4: uuidv4 } = require('uuid')
 const { Schema } = mongoose
+const constants = require('../global/index')
+const jwt = require('jsonwebtoken')  
 const { defaultFields, defaultSchemaOptions } = require('./model-utils')
 
 const userSchema = new Schema({
