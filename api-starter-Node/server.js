@@ -32,7 +32,7 @@ const initialize = async () => {
     return res.status(500).json({ error: error.message || 'Something unexpected happened!' })
   })
 
-  app.listen(9090 || constants.PORT, () => console.log(`Listening on port http://localhost:${constants.PORT}`))
+  app.listen(constants.PORT, () => console.log(`Listening on port http://localhost:${constants.PORT}`))
 }
 
 initialize().catch((error) => console.error('Error while setup server', error.message))
